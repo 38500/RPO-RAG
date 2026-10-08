@@ -39,3 +39,19 @@ hf download Qwen/Qwen3-8B \
 #安装依赖
 pip install -r train_RPO/requirements.txt
 pip install -r predict_result/requirements.txt
+
+# ===== Hugging Face 身份认证 =====
+hf auth login 
+
+
+# ===== 按需下载训练权重 =====
+
+# Stage 1
+# hf download Nixiaoyan/RPO-Qwen3-8B \
+#   --include "Stage1/*" \
+#   --local-dir /workspace/checkpoints
+
+# Stage 2
+# hf download Nixiaoyan/RPO-Qwen3-8B \
+#   --include "Stage2/*" \
+#   --local-dir /workspace/checkpoints
